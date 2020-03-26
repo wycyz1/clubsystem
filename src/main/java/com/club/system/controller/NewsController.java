@@ -32,6 +32,7 @@ public class NewsController {
 
     @PostMapping("/api/news")
     public News addOrUpdate(@RequestBody News news) throws Exception {
+        System.out.println(news.getContent());
         newsService.addOrUpdate(news);
         return news;
     }
